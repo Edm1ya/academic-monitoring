@@ -11,11 +11,11 @@ class Subject extends Model
     use HasFactory;
 
     protected $fillable = [
-        'clave',
+        'code',
         'name',
-        'ht',
-        'hp',
-        'cr',
+        'theoretical_hours',
+        'practical_hours',
+        'credits',
         'semester',
         'prerequisites'
     ];

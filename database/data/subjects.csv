@@ -1,0 +1,21 @@
+Clave,Asignatura,HT,HP,CR,Prerequisitos,Semestre
+BIO-0140,Biología Básica,2,2,3,,1
+DOP-1000,Orientación Institucional,1,0,1,,1
+HIS-0110,Fund De His Social Dominicana,3,0,3,,1
+INF-2060,Computación Esencial,4,0,4,INF2070 / (INF2070),1
+INF-2070,Lab de Computación Esencial,0,2,1,INF2060 / (INF2060),1
+LET-0110,Lengua Española Básica I,3,1,3,,1
+SOC-0100,Introd A Las Ciencias Sociales,3,0,3,,1
+EFS-0120,Educación Física,1,2,2,,2
+IDI-0280,Inglés Elemental,5,0,5,,2
+INF-5100,Introducción a la Programación,4,0,4,"INF5110 / (INF5110), INF2060, INF2070",2
+INF-5110,Lab de Int a la Programación,0,2,1,"INF5100 / (INF5100), INF2060, INF2070",2
+LET-0120,Lengua Española Básica II,3,1,3,LET0110 / LET0130 / LET0150,2
+MAT-0140,Matemática Básica,4,0,4,,2
+FIL-0110,Int A La Filosofía,3,0,3,,3
+FIS-0140,Física Básica,3,3,4,,3
+IDI-0130,Inglés Técnico,4,0,4,IDI0230 / IDI0210 / IDI0280,3
+INF-5120,Lenguaje de Programación I,4,0,4,"INF5130 / (INF5130), INF5100, INF5110",3
+INF-5130,Lab de Lenguaje de Programac I,0,2,1,"INF5120 / (INF5120), INF5100, INF5110",3
+MAT-2330,Análisis Lineal Y Matricial,4,2,5,MAT0140 / MAT0120,3
+QUI-0140,Química Básica,2,3,3,,3

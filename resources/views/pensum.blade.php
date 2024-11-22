@@ -11,61 +11,45 @@
             </div>
 
             <div>
-                <table
-                    class="w-full text-sm text-left rtl:text-right text-gray-500 border-4 rounded-3xl"
-                >
-                    <thead
-                        class="text-xs text-gray-700 uppercase bg-gray-50"
-                    >
-                    <tr>
-                        <th scope="col" class="px-6 py-3">Clave</th>
-                        <th scope="col" class="px-6 py-3">Asignatura</th>
-                        <th scope="col" class="px-6 py-3">HT</th>
-                        <th scope="col" class="px-6 py-3">HP</th>
-                        <th scope="col" class="px-6 py-3">CR</th>
-                        <th scope="col" class="px-6 py-3">Prerequisitos</th>
-                        <th scope="col" class="px-6 py-3">Semestre</th>
-                        <th scope="col" class="px-6 py-3">Estatus</th>
-                    </tr>
+                <table class="w-full text-sm text-left rtl:text-right text-gray-500 border-4 rounded-3xl">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                        <tr>
+                            <th scope="col" class="px-6 py-3">Clave</th>
+                            <th scope="col" class="px-6 py-3">Asignatura</th>
+                            <th scope="col" class="px-6 py-3">HT</th>
+                            <th scope="col" class="px-6 py-3">HP</th>
+                            <th scope="col" class="px-6 py-3">CR</th>
+                            <th scope="col" class="px-6 py-3">Prerequisitos</th>
+                            <th scope="col" class="px-6 py-3">Semestre</th>
+                            <th scope="col" class="px-6 py-3">Estatus</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    <tr
-                        class="bg-white border-b"
-                    >
-                        <th
-                            scope="row"
-                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
-                        >
-                            Apple MacBook Pro 17"
-                        </th>
-                        <td class="px-6 py-4">Silver</td>
-                        <td class="px-6 py-4">Laptop</td>
-                        <td class="px-6 py-4">$2999</td>
-                    </tr>
-                    <tr
-                        class="bg-white border-b"
-                    >
-                        <th
-                            scope="row"
-                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
-                        >
-                            Microsoft Surface Pro
-                        </th>
-                        <td class="px-6 py-4">White</td>
-                        <td class="px-6 py-4">Laptop PC</td>
-                        <td class="px-6 py-4">$1999</td>
-                    </tr>
-                    <tr class="bg-white">
-                        <th
-                            scope="row"
-                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
-                        >
-                            Magic Mouse 2
-                        </th>
-                        <td class="px-6 py-4">Black</td>
-                        <td class="px-6 py-4">Accessories</td>
-                        <td class="px-6 py-4">$99</td>
-                    </tr>
+                        @foreach (\App\Models\Subject::all() as $subject)
+                            <tr class="bg-white border-b">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                    {{ $subject->code }}
+                                </th>
+                                <td class="px-6 py-4">
+                                    {{ $subject->name }}
+                                </td>
+                                <td class="px-6 py-4">
+                                    {{ $subject->theoretical_hours }}
+                                </td>
+                                <td class="px-6 py-4">
+                                    {{ $subject->practical_hours }}
+                                </td>
+                                <td class="px-6 py-4">
+                                    {{ $subject->credits }}
+                                </td>
+                                <td class="px-6 py-4">
+                                    {{ $subject->prerequisites }}
+                                </td>
+                                <td class="px-6 py-4">
+                                    {{ $subject->semester }}
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

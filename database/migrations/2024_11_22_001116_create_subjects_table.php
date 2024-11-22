@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('subjects', function (Blueprint $table) {
             $table->id();
-            $table->string('clave');
+            $table->string('code')->unique();
             $table->string('name');
-            $table->unsignedTinyInteger('ht');
-            $table->unsignedTinyInteger('hp');
-            $table->unsignedTinyInteger('cr');
+            $table->unsignedTinyInteger('theoretical_hours');
+            $table->unsignedTinyInteger('practical_hours');
+            $table->unsignedTinyInteger('credits');
             $table->unsignedTinyInteger('semester');
-            $table->json('prerequisites');
+            $table->json('prerequisites')->nullable();
             $table->timestamps();
         });
     }
